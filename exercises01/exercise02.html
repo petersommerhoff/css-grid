@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS3 Grids</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template:
+        80px 80px
+        / auto auto auto auto;
+      grid-gap: 5px;
+    }
+
+    div {
+      background-color: #d7dee0;
+      padding: 25px;
+      text-align: center;
+      font-size: 20px;
+      font-family: Ubuntu, sans-serif;
+    }
+
+    div:nth-of-type(3) {
+      order: -1;
+    }
+
+    div:nth-of-type(5) {
+      order: 1;
+    }
+
+    div:nth-of-type(1) {
+      order: 10;
+    }
+
+  </style>
+</head>
+<body class="container">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+  <div>Item 4</div>
+  <div>Item 5</div>
+  <div>Item 6</div>
+  <div>Item 7</div>
+  <div>Item 8</div>
+</body>
+</html>

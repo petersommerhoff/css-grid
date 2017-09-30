@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS3 Grids</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-rows: 60px 240px 120px;
+      grid-template-columns: auto auto auto;
+      grid-gap: 10px;
+    }
+
+    .header {
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 3;
+      background-color: #263238;
+    }
+
+    .main {
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 2;
+      background-color: #CCCFD1;
+    }
+
+    .sidebar {
+      grid-row: 2 / span 1;
+      grid-column: 3 / span 1;
+      background-color: #AFB8BC;
+    }
+
+    .footer {
+      grid-row: 3 / span 1;
+      grid-column: 1 / span 3;
+      background-color: #67676F;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header"></div>
+    <div class="main"></div>
+    <div class="sidebar"></div>
+    <div class="footer"></div>
+  </div>
+</body>
+</html>
