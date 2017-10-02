@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS3 Grids</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-gap: 10px;
+      grid-template: 100px 100px / 1fr 1fr 1fr;
+    }
+
+    body {
+      font-family: Ubuntu, sans-serif;
+      font-size: 20px;
+    }
+
+    div {
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+      background-color: #607D8B;
+    }
+
+    .grid div:nth-child(1) {
+      justify-self: center;
+      align-self: center;
+    }
+
+    .grid div:nth-child(2) {
+      justify-self: end;
+    }
+
+    .grid div:nth-child(3) {
+      justify-self: stretch;
+      align-self: center;
+    }
+
+    .grid div:nth-child(4) {
+      align-self: start;
+      justify-self: end;
+    }
+
+    .grid div:nth-child(5) {
+      align-self: end;
+      justify-self: center;
+    }
+
+    .grid div:nth-child(6) {
+      justify-self: center;
+    }
+
+  </style>
+</head>
+<body>
+  <main class="grid">
+    <div>Grid item 1</div>
+    <div>Grid item 2</div>
+    <div>Grid item 3</div>
+    <div>Grid item 4</div>
+    <div>Grid item 5</div>
+    <div>Grid item 6</div>
+  </main>
+</body>
+</html>

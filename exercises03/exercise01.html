@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS3 Grids</title>
+  <style>
+    .grid {
+      display: grid;
+      height: 200px;
+      margin-top: 20px;
+      grid-gap: 10px;
+      border: 2px solid #607D8B;
+
+      /* ===
+       * First grid layout
+       * ===
+       */
+      /*justify-content: center;*/
+      /*align-content: end;*/
+
+      /* ===
+      * Second grid layout
+      * ===
+      */
+      /*justify-content: space-between;*/
+      /*align-content: center;*/
+
+      /* ===
+       * Third grid layout
+       * ===
+       */
+      justify-items: end;
+      align-items: center;
+      grid-template: 70px 70px / 25% 25% 25%;
+    }
+
+    main {
+      border: 2px solid #37474F;
+      padding: 10px;
+    }
+
+    body {
+      font-family: Ubuntu, sans-serif;
+      font-size: 20px;
+    }
+
+    .grid div {
+      text-align: center;
+      padding: 15px;
+      color: #fff;
+      background-color: #90A4AE;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    Main content
+    <div class="grid">
+      <div>Grid item 1</div>
+      <div>Grid item 2</div>
+      <div>Grid item 3</div>
+      <div>Grid item 4</div>
+      <div>Grid item 5</div>
+      <div>Grid item 6</div>
+    </div>
+  </main>
+</body>
+</html>
