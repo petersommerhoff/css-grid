@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS3 Grids</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-template: 220px / repeat(3, 1fr);
+      grid-auto-rows: 220px;
+      grid-gap: 10px;
+    }
+
+    body {
+      font-family: Ubuntu, sans-serif;
+      font-size: 20px;
+    }
+
+    div {
+      text-align: center;
+      color: #fff;
+      background-color: #607D8B;
+      overflow: hidden;
+    }
+
+    img {
+      height: 100%;
+    }
+
+  </style>
+</head>
+<body>
+  <main class="grid">
+    <div><img src="images/mountains.jpg" alt="Mountains"></div>
+    <div><img src="images/lake.jpg" alt="Lake"></div>
+    <div><img src="images/forest.jpg" alt="Forest"></div>
+    <div><img src="images/city.jpg" alt="City"></div>
+    <div><img src="images/guitar.jpg" alt="Guitar"></div>
+    <div><img src="images/blossoms.jpg" alt="Blossoms"></div>
+    <div><img src="images/gate.jpg" alt="Gate"></div>
+    <div><img src="images/tracks.jpg" alt="Tracks"></div>
+  </main>
+</body>
+</html>
