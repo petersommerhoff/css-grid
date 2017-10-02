@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS3 Grids</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-gap: 10px;  /* The gap is important for this task! */
+
+      /* ===
+       * 1.4) This will generate two columns because
+       * auto-fill prefers a fixed max size, here 200px,
+       * and only two of those fit.
+       * ===
+       */
+      /*width: 500px;*/
+      /*grid-template: 100px 100px / repeat(auto-fill, minmax(100px, 200px));*/
+
+
+      /* ===
+       * 2.2) This generates 4 columns because there is no
+       * fixed max size so the min size is used
+       * ===
+       */
+      /*width: 500px;*/
+      /*grid-template: 100px 100px / repeat(auto-fill, minmax(100px, 1fr));*/
+
+
+      /* ===
+       * 2.3) This still generates the same 4 columns
+       * because there's not enough space for auto-fill
+       * to create an additional unused column anyway.
+       * Thus, there is nothing to collapse for auto-fit.
+       * ===
+       */
+      /*width: 500px;*/
+      /*grid-template: 100px 100px / repeat(auto-fit, minmax(100px, 1fr));*/
+
+
+      /* ===
+       * 2.4) Due to grid-gap and the column width, at
+       * 540px, auto-fill is able to generate a fifth unused column.
+       * Thus, auto-fit will collapse that to 0px, making the
+       * remaining four columns take up more space.
+       * ===
+       */
+      width: 540px;
+      grid-template: 100px 100px
+        / repeat(auto-fill, minmax(100px, 1fr));
+
+    }
+
+    div {
+      background-color: #E0E0E0;
+    }
+
+  </style>
+</head>
+<body>
+  <main class="grid">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </main>
+</body>
+</html>

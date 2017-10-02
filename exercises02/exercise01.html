@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS3 Grids</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-rows: 80px 160px 320px 160px 80px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+        "header header header header"
+        "image  image  cta    cta"
+        "main   main   main   main"
+        "links  links  links  ads"
+        "footer footer footer footer";
+      grid-gap: 10px;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #263238;
+    }
+
+    .teaser-image {
+      grid-area: image;
+      background-color: #B0BEC5;
+    }
+
+    .teaser-cta {
+      grid-area: cta;
+      background-color: #90A4AE;
+    }
+
+    .main {
+      grid-area: main;
+      background-color: #CFD8DC;
+    }
+
+    .footer-links {
+      grid-area: links;
+      background-color: #455A64;
+    }
+
+    .footer-ads {
+      grid-area: ads;
+      background-color: #455A64;
+    }
+
+    .superfooter {
+      grid-area: footer;
+      background-color: #263238;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header"></div>
+    <div class="teaser-image"></div>
+    <div class="teaser-cta"></div>
+    <div class="main"></div>
+    <div class="footer-links"></div>
+    <div class="footer-ads"></div>
+    <div class="superfooter"></div>
+  </div>
+</body>
+</html>
