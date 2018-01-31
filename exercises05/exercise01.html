@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS Grid Exercise 5.1 - Overlapping Grid Items</title>
+  <style>
+    .stack {
+      display: grid;
+      grid: repeat(5, 100px) / repeat(5, 100px);
+      margin-top: 50px;
+    }
+
+    .top {
+      grid-row: 1 / span 3;
+      grid-column: 1 / span 3;
+      z-index: 3;
+      background-color: rgba(150, 0, 0, 0.7);
+    }
+
+    .middle {
+      grid-row: 3 / span 3;
+      grid-column: 3 / span 3;
+      z-index: 2;
+      background-color: rgba(0, 150, 0, 0.7);
+    }
+
+    .bottom {
+      grid-row: 2 / span 3;
+      grid-column: 2 / span 3;
+      z-index: 1;
+      background-color: rgba(0, 0, 150, 0.7);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="stack">
+    <div class="item top">Top</div>
+    <div class="item bottom">Bottom</div>
+    <div class="item middle">Middle</div>
+  </div>
+</body>
+</html>

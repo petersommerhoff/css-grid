@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS Grid Exercise 5.3 - Absolute Positioning</title>
+  <style>
+    .gallery {
+      display: grid;
+      grid: 1fr 1fr / 1fr 1fr;
+      grid-gap: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+    }
+
+    .image {
+      position: relative;
+    }
+
+    .gallery span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 10px;
+      font-family: Ubuntu, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <main class="gallery">
+    <div class="image">
+      <img src="images/artwork01.jpeg" alt="Artwork">
+      <span>Available</span>
+    </div>
+    <div class="image">
+      <img src="images/artwork02.jpeg" alt="Artwork">
+      <span>Sold</span>
+    </div>
+    <div class="image">
+      <img src="images/artwork03.jpeg" alt="Artwork">
+      <span>Sold</span>
+    </div>
+    <div class="image">
+      <img src="images/artwork04.jpeg" alt="Artwork">
+      <span>Available</span>
+    </div>
+  </main>
+</body>
+</html>

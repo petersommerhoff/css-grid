@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS Grid Exercise 5.2 - Nested Grids</title>
+  <style>
+    .grid {
+      display: grid;
+      grid: repeat(3, 200px) / repeat(4, 1fr);
+      grid-gap: 5px;
+      font-family: Ubuntu, sans-serif;
+    }
+
+    .item {
+      padding: 10px;
+      background-color: #efefef;
+    }
+
+    .subgrid {
+      display: grid;
+      grid: 1fr 1fr / 1fr 1fr;
+      grid-gap: 5px;
+    }
+
+    .item div {
+      background-color: #cfcfcf;
+      padding: 5px;
+    }
+
+    .hsplit {
+      display: grid;
+      grid: 1fr 1fr / 1fr;
+      grid-gap: 5px;
+    }
+
+    .vsplit {
+      display: grid;
+      grid: 1fr / 1fr 1fr;
+      grid-gap: 5px;
+    }
+  </style>
+</head>
+<body>
+  <main class="grid">
+    <div class="item">Item 1</div>
+    <div class="item subgrid">
+      <div>Sub 1</div>
+      <div>Sub 2</div>
+      <div>Sub 3</div>
+      <div>Sub 4</div>
+    </div>
+    <div class="item subgrid">
+      <div>Sub 1</div>
+      <div>Sub 2</div>
+      <div>Sub 3</div>
+      <div>Sub 4</div>
+    </div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item hsplit">
+      <div>Sub 1</div>
+      <div>Sub 2</div>
+    </div>
+    <div class="item vsplit">
+      <div>Sub 1</div>
+      <div>Sub 2</div>
+    </div>
+    <div class="item">Item 8</div>
+    <div class="item subgrid">
+      <div>Sub 1</div>
+      <div>Sub 2</div>
+      <div>Sub 3</div>
+      <div>Sub 4</div>
+    </div>
+    <div class="item">Item 10</div>
+    <div class="item">Item 11</div>
+    <div class="item subgrid">
+      <div>Sub 1</div>
+      <div>Sub 2</div>
+      <div>Sub 3</div>
+      <div>Sub 4</div>
+    </div>
+  </main>
+</body>
+</html>
